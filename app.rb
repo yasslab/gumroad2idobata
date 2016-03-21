@@ -10,3 +10,5 @@ require 'idobata'
 Idobata.hook_url = ENV['IDOBATA_END']
 #OmniAuthの使い方がわからないため、tokenを利用した
 gumroad_access_token = ENV['GUMROAD_ACCESS_TOKEN']
+
+uri = open('https://api.gumroad.com/v2/products/?gumroad_access_token')
