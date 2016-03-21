@@ -14,3 +14,10 @@ gumroad_access_token = ENV['GUMROAD_ACCESS_TOKEN']
 uri = open('https://api.gumroad.com/v2/products/?gumroad_access_token')
 data = uri.read
 json = JSON.parse(data) #extract as json
+
+
+
+#Problem
+# => I need help in oauth
+#IDEA
+# => IF the total sales is equal from previous run; break?
