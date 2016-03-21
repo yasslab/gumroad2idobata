@@ -9,10 +9,13 @@ require 'idobata'
 
 Idobata.hook_url = ENV['IDOBATA_END']
 #OmniAuthの使い方がわからないため、tokenを利用した
-gumroad_access_token = ENV['GUMROAD_ACCESS_TOKEN']
+@gumroad_access_token = ENV['GUMROAD_ACCESS_TOKEN']
 
-uri = open('https://api.gumroad.com/v2/products/?gumroad_access_token')
-data = uri.read
+@target_url = "https://api.gumroad.com/v2/products/?gumroad_access_token="
+@base_url	= @target_url + "#{@gumroad_access_token}"
+
+uri = open(@base_url)
+data = test.read
 json = JSON.parse(data)	#extract as json
 
 total_sales = json['products'][0]['sales_count']	#looking for field and putting the value as var
