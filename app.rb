@@ -12,4 +12,4 @@ Idobata.hook_url = ENV['IDOBATA_END']
 gumroad_access_token = ENV['GUMROAD_ACCESS_TOKEN']
 
 uri = open('https://api.gumroad.com/v2/products/?gumroad_access_token')
-data.uri.read
+data = uri.read
