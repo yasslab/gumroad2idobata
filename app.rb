@@ -1,6 +1,8 @@
+require 'uri'
 require 'open-uri'
 require 'json'
 require 'idobata'
+#require 'pry'
 #require 'omniauth-gumroad'
 
 #use OmniAuth::Builder do
@@ -15,7 +17,7 @@ target_url  = "https://api.gumroad.com/v2/products/?gumroad_access_token="
 base_url    = target_url + "#{gumroad_access_token}"
 
 uri  = open(base_url)
-data = test.read
+data = uri.read
 json = JSON.parse(data)	#extract as json
 
 total_sales = json['products'][0]['sales_count']	#looking for field and putting the value as var
