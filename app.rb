@@ -18,8 +18,8 @@ prev_tsales	= @total_sales							#storing previous var to diffrent var
 @total_sales = json['products'][0]['sales_count']	#looking for field and putting the value as var
 tsales_diff = @total_sales.to_i - prev_tsales.to_i				#subtacting the diffrence between old and new var
 
-if prev_tsales < total_sales
-	emoji = :naku
-end
+#if prev_tsales < ＠total_sales
+#	emoji = :naku
+#end
 
 Idobata::Message.create(source:"今日の売上は、#{@total_sales}円です！ 前回の売上との差額は #{tsales_diff}円です！") 	#combing and making the sentence
