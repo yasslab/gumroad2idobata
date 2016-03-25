@@ -3,14 +3,8 @@ require 'open-uri'
 require 'json'
 require 'idobata'
 #require 'pry'
-#require 'omniauth-gumroad'
-
-#use OmniAuth::Builder do
-#    provider :gumroad, ENV['GUMROAD_APPLICATION_ID'], ENV['GUMROAD_APP_SECRET']
-#end
 
 Idobata.hook_url = ENV['IDOBATA_END']
-#OmniAuthの使い方がわからないため、tokenを利用した
 gumroad_access_token = ENV["GUMROAD_ACCESS_TOKEN"]
 
 target_url  = "https://api.gumroad.com/v2/products/?access_token="
@@ -20,13 +14,12 @@ uri  = open(base_url)
 data = uri.read
 json = JSON.parse(data)	#extract as json
 
+prev_tsales	= total_sales							#storing previous var to diffrent var
 total_sales = json['products'][0]['sales_count']	#looking for field and putting the value as var
+tsales_diff = total_sales - prev_tsales				#subtacting the diffrence between old and new var
 
-Idobata::Message.create(source:"Total Sales:" + total_sales) 	#combing and making the sentence
+#if prev_tsales < total_sales
+#	emoji = :naku
+#end
 
-#Problem
-# => I need help in oauth
-#IDEA
-# => IF the total sales is equal from previous run; break? excep.?
-#TO DO
-# => Ask for heroku account and how to set ENV on my computer
+Idobata::Message.create(source:"今日の売上は、¥" + total_sales +"円です！" + "前回の売上との差額は" + tsales_diff) 	#combing and making the sentence
