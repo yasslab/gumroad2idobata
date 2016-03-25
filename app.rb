@@ -21,7 +21,7 @@ prev_tsales	= @total_sales							#storing previous var to diffrent var
 emoji = ":moneybag:"
 emoji_array = []
 
-tsales_diff.times do |x|
+@total_sales.times do |x|
 	emoji_array << emoji
 end
 
