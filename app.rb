@@ -18,3 +18,5 @@ emoji_array = []
 @total_sales.times do |x|
     emoji_array << emoji
 end
+
+Idobata::Message.create(source:"#{emoji_array.join("")}")
