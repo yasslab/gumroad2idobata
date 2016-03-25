@@ -12,3 +12,9 @@ json = JSON.parse(data)    #extract as json
 
 prev_tsales    = @total_sales                        #storing previous var to diffrent var
 @total_sales = json['products'][0]['sales_count']    #looking for field and putting the value as var
+
+emoji = ":moneybag:"
+emoji_array = []
+@total_sales.times do |x|
+    emoji_array << emoji
+end
