@@ -13,8 +13,8 @@ data = uri.read
 json = JSON.parse(data)    				#extract as json
 
 prev_tsales = @total_sales_sum 			#storing previous var to diffrent var
-total_sales = [] 						#make an array list to store each product's sales count
 total_items = json['products'].length	#get the array value stored under products
+total_sales = [] 						#make an array list to store each product's sales count
 
 #Loop each product array to get sales_count
 total_items.times do |x|
