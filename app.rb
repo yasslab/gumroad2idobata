@@ -2,6 +2,7 @@ require 'uri'
 require 'open-uri'
 require 'json'
 require 'idobata'
+require './art'
 
 Idobata.hook_url 	 = ENV['IDOBATA_END']
 gumroad_access_token = ENV['GUMROAD_ACCESS_TOKEN']
@@ -27,9 +28,9 @@ end
 #Dealing with emoji's being sent 
 emoji 		= ":moneybag:"
 emoji_array = []
+emoji_array_count = emoji_array.length
 
-@total_sales_sum.times do |a|
-    emoji_array << emoji
+emoji_array_count.times do |x|
+	uriage(emoji_array.at(x))
+	Idobata::Message.create(source:"#{BODY}")
 end
-
-Idobata::Message.create(source:"#{emoji_array.join("")}")

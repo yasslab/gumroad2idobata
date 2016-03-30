@@ -88,17 +88,17 @@ two = <<BODY
 BODY
 
 one = <<BODY
-:cloud::cloud::pizza::cloud::cloud::cloud:
-:cloud::pizza::pizza::cloud::cloud::cloud:
-:pizza::cloud::pizza::cloud::cloud::cloud:
-:cloud::cloud::pizza::cloud::cloud::cloud:
-:cloud::cloud::pizza::cloud::cloud::cloud:
-:cloud::cloud::pizza::cloud::cloud::cloud:
-:pizza::pizza::pizza::pizza::pizza::cloud:
+:cloud::cloud::moneybag::cloud::cloud::cloud:
+:cloud::moneybag::moneybag::cloud::cloud::cloud:
+:moneybag::cloud::moneybag::cloud::cloud::cloud:
+:cloud::cloud::moneybag::cloud::cloud::cloud:
+:cloud::cloud::moneybag::cloud::cloud::cloud:
+:cloud::cloud::moneybag::cloud::cloud::cloud:
+:moneybag::moneybag::moneybag::moneybag::moneybag::cloud:
 BODY
-uriage = 6
 
-body =
+def uriage(uriage)
+body = 
   case uriage
   when 10
     ten
@@ -123,6 +123,4 @@ body =
   else
     ':moneybag:' * uriage
   end
-
-puts body
-
+end
