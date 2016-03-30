@@ -3,8 +3,9 @@ require 'open-uri'
 require 'json'
 require 'idobata'
 
-Idobata.hook_url = ENV['IDOBATA_END']
+Idobata.hook_url 	 = ENV['IDOBATA_END']
 gumroad_access_token = ENV['GUMROAD_ACCESS_TOKEN']
+
 target_url  = "https://api.gumroad.com/v2/products/?access_token="
 base_url    = target_url + "#{gumroad_access_token}"
 
