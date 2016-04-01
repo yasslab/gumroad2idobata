@@ -26,11 +26,14 @@ end
 @total_sales_sum = total_sales.inject(0, :+)  #add each array value and store as a sum
 
 #Dealing with emoji's being sent 
-emoji 		= ":moneybag:"
-emoji_array = []
+emoji_array = @total_sales_sum.to_s.split(//)
 emoji_array_count = emoji_array.length
 
+emoji_readable = []
+
 emoji_array_count.times do |x|
-	uriage(emoji_array.at(x))
-	Idobata::Message.create(source:"#{@body}")
+    uriage(emoji_array.at(x))
+    emoji_readable << @body
 end
+
+Idobata::Message.create(source:"#{emoji_readable * "\n"}")
