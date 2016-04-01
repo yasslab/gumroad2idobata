@@ -32,5 +32,5 @@ emoji_array_count = emoji_array.length
 
 emoji_array_count.times do |x|
 	uriage(emoji_array.at(x))
-	Idobata::Message.create(source:"#{BODY}")
+	Idobata::Message.create(source:"#{@body}")
 end

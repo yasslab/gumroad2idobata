@@ -1,4 +1,4 @@
-ten = <<BODY
+@ten = <<BODY
 :cloud::cloud::moneybag::cloud::cloud:
 :cloud::cloud::moneybag::cloud::cloud:
 :moneybag::moneybag::moneybag::moneybag::moneybag:
@@ -7,7 +7,7 @@ ten = <<BODY
 :cloud::cloud::moneybag::cloud::cloud:
 BODY
 
-nine = <<BODY
+@nine = <<BODY
 :cloud::moneybag::moneybag::moneybag::cloud::cloud:
 :moneybag::cloud::cloud::cloud::moneybag::cloud:
 :moneybag::cloud::cloud::cloud::moneybag::cloud:
@@ -17,7 +17,7 @@ nine = <<BODY
 :cloud::moneybag::moneybag::moneybag::cloud::cloud:
 BODY
 
-eight = <<BODY
+@eight = <<BODY
 :cloud::moneybag::moneybag::moneybag::cloud::cloud:
 :moneybag::cloud::cloud::cloud::moneybag::cloud:
 :moneybag::cloud::cloud::cloud::moneybag::cloud:
@@ -27,7 +27,7 @@ eight = <<BODY
 :cloud::moneybag::moneybag::moneybag::cloud::cloud:
 BODY
 
-seven = <<BODY
+@seven = <<BODY
 :moneybag::moneybag::moneybag::moneybag::moneybag::cloud:
 :moneybag::cloud::cloud::moneybag::cloud::cloud:
 :cloud::cloud::moneybag::cloud::cloud::cloud:
@@ -37,7 +37,7 @@ seven = <<BODY
 :cloud::cloud::cloud::cloud::cloud::cloud:
 BODY
 
-six = <<BODY
+@six = <<BODY
 :cloud::moneybag::moneybag::moneybag::cloud::cloud:
 :moneybag::cloud::cloud::cloud::moneybag::cloud:
 :moneybag::cloud::cloud::cloud::cloud::cloud:
@@ -47,7 +47,7 @@ six = <<BODY
 :cloud::moneybag::moneybag::moneybag::cloud::cloud:
 BODY
 
-five = <<BODY
+@five = <<BODY
 :moneybag::moneybag:::moneybag::moneybag::cloud::cloud:
 :moneybag::cloud::cloud::cloud::cloud::cloud:
 :moneybag::cloud::cloud::cloud::cloud::cloud:
@@ -57,7 +57,7 @@ five = <<BODY
 :cloud::moneybag::moneybag::moneybag::cloud::cloud:
 BODY
 
-four = <<BODY
+@four = <<BODY
 :moneybag::cloud::cloud::cloud::cloud::cloud:
 :moneybag::cloud::cloud::moneybag::cloud::cloud:
 :moneybag::cloud::cloud::moneybag::cloud::cloud:
@@ -67,7 +67,7 @@ four = <<BODY
 :cloud::cloud::cloud::moneybag::cloud::cloud:
 BODY
 
-three = <<BODY
+@three = <<BODY
 :cloud::moneybag::moneybag::moneybag::cloud::cloud:
 :moneybag::cloud::cloud::cloud::moneybag::cloud:
 :cloud::cloud::cloud::cloud::moneybag::cloud:
@@ -77,7 +77,7 @@ three = <<BODY
 :cloud::moneybag::moneybag::moneybag::cloud::cloud:
 BODY
 
-two = <<BODY
+@two = <<BODY
 :cloud::moneybag::moneybag::moneybag::cloud::cloud:
 :moneybag::cloud::cloud::cloud::moneybag::cloud:
 :cloud::cloud::cloud::cloud::moneybag::cloud:
@@ -87,7 +87,7 @@ two = <<BODY
 :moneybag::moneybag::moneybag::moneybag::moneybag::cloud:
 BODY
 
-one = <<BODY
+@one = <<BODY
 :cloud::cloud::moneybag::cloud::cloud::cloud:
 :cloud::moneybag::moneybag::cloud::cloud::cloud:
 :moneybag::cloud::moneybag::cloud::cloud::cloud:
@@ -98,28 +98,28 @@ one = <<BODY
 BODY
 
 def uriage(uriage)
-body = 
+@body = 
   case uriage
-  when 10
-    ten
-  when 9
-  	nine
-  when 8
-  	eight
-  when 7
-  	seven
-  when 6
-  	six
-  when 5
-  	five
-  when 4
-  	four
-  when 3
-  	three
-  when 2
-  	two
-  when 1
-  	one
+  when "10"
+    @ten
+  when "9"
+  	@nine
+  when "8"
+  	@eight
+  when "7"
+  	@seven
+  when "6"
+  	@six
+  when "5"
+  	@five
+  when "4"
+  	@four
+  when "3"
+  	@three
+  when "2"
+  	@two
+  when "1"
+  	@one
   else
     ':moneybag:' * uriage
   end
