@@ -96,9 +96,7 @@ BODY
 :cloud::cloud::moneybag::cloud::cloud::cloud:
 :moneybag::moneybag::moneybag::moneybag::moneybag::cloud:
 BODY
-
-def uriage(uriage)
-@body = 
+def uriage(uriage) 
   case uriage
   when "10"
     @ten
