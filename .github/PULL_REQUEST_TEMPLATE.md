@@ -1,27 +1,19 @@
 ## やりたいこと
 
-Gumroadでの売上をみんながよく見るチャットに流して可視化して、モチベーションを上げたい。
+Gumroadでの売上の差分を一日置きに取得してみんなが見るチャットに投稿したい
 
 ## やったこと
 
 - [x] GumroadのAPIを実行して売上を取得できる
+- [x] Gumroadの売上を集計できる
 - [x] Idobataに売上を投稿できる
+- [x] heroku Sceduler から定期的に実行する (現在停止中)
 
 ## やらなかったこと
--  Heroku Sceduler から定期的に実行する
-- アクセストークンの取得と環境変数の設定
+- Heroku scd. から過去の変数を取得する
+- 差分を表示
+
 
 ## 困ってること
 
-> どこで動かしましょう?
-
-#mails や #health と同様に、Heroku Scheduler で動かそうかなぁって考えてます :rocket: 
-by:yasulab
-> テストの書き方
-
-ここはあんまり決めてないです :sweat_drops: (minitest?)
-by:yasulab
-> どの部屋に流すか
-
-今のところは [#gumroad](https://idobata.io/#/organization/yasslab/room/gumroad) 部屋って方向で考えてます :door: 
-by:yasulab
+データベースを利用して集計をしたほうがいいのか
