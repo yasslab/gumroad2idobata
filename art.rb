@@ -98,13 +98,13 @@ BODY
 BODY
 
 @zero = <<BODY
-:cloud::cloud::pizza::pizza::pizza::cloud::cloud::cloud:
-:cloud::pizza::cloud::cloud::cloud::pizza::cloud::cloud:
-:pizza::cloud::cloud::cloud::cloud::cloud::pizza::cloud:
-:pizza::cloud::cloud::cloud::cloud::cloud::pizza::cloud:
-:pizza::cloud::cloud::cloud::cloud::cloud::pizza::cloud:
-:cloud::pizza::cloud::cloud::cloud::pizza::cloud::cloud:
-:cloud::cloud::pizza::pizza::pizza::cloud::cloud::cloud:
+:cloud::cloud::money::cloud::cloud::cloud:
+:cloud::monry::cloud::money::cloud::cloud:
+:money::cloud::cloud::cloud::money::cloud:
+:money::cloud::cloud::cloud::money::cloud:
+:money::cloud::cloud::cloud::money::cloud:
+:cloud::money::cloud::money::cloud::cloud:
+:cloud::cloud::money::cloud::cloud::cloud:
 BODY
 def uriage(uriage) 
   case uriage
