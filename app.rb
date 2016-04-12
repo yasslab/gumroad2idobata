@@ -30,13 +30,11 @@ if jsonCount['next_page_url'].nil? == false
 
 	Idobata::Message.create(source:"設定された日付からの集計は #{total}")
 
-	else if jsonCount['next_page_url'].nil? == true
+	else if jsonCount['next_page_url'].nil? == true  && jsonCount['sales'].size  > 0
 	emoji_readable = []
 	@body = uriage(jsonCount['sales'].size.to_s)
 	emoji_readable  << @body
 
-		if jsonCount['sales'].size = 0 
-			Idobata::Message.create(source:"今日の購入数は " + "\n" + "#{emoji_readable*"\n"}")
-		end
+	Idobata::Message.create(source:"今日の購入数は " + "\n" + "#{emoji_readable*"\n"}")
 	end
 end
