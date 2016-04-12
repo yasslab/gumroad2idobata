@@ -5,8 +5,8 @@ require 'idobata'
 #require 'pry'
 require './art.rb'
 
-#Idobata.hook_url	= ENV['IDOBATA_END']
-Idobata.hook_url	= ENV['IDOBATA_LOCAL_END']
+Idobata.hook_url	= ENV['IDOBATA_END']
+#Idobata.hook_url	= ENV['IDOBATA_LOCAL_END']
 gumroad_access_token	= ENV['GUMROAD_ACCESS_TOKEN']
 
 
