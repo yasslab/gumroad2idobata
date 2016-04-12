@@ -96,6 +96,16 @@ BODY
 :cloud::cloud::moneybag::cloud::cloud::cloud:
 :moneybag::moneybag::moneybag::moneybag::moneybag::cloud:
 BODY
+
+@zero = <<BODY
+:cloud::cloud::pizza::pizza::pizza::cloud::cloud::cloud:
+:cloud::pizza::cloud::cloud::cloud::pizza::cloud::cloud:
+:pizza::cloud::cloud::cloud::cloud::cloud::pizza::cloud:
+:pizza::cloud::cloud::cloud::cloud::cloud::pizza::cloud:
+:pizza::cloud::cloud::cloud::cloud::cloud::pizza::cloud:
+:cloud::pizza::cloud::cloud::cloud::pizza::cloud::cloud:
+:cloud::cloud::pizza::pizza::pizza::cloud::cloud::cloud:
+BODY
 def uriage(uriage) 
   case uriage
   when "10"
@@ -118,7 +128,9 @@ def uriage(uriage)
   	@two
   when "1"
   	@one
+  when "0"
+	@zero
   else
-    ':moneybag:' * uriage
+    ':moneybag:' * uriage.to_i
   end
 end
