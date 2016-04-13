@@ -2,7 +2,7 @@ require 'open-uri'
 require 'date'
 require 'json'
 require 'idobata'
-#require 'pry'
+require 'pry'
 require './art.rb'
 
 Idobata.hook_url      = ENV['IDOBATA_END']
