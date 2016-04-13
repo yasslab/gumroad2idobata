@@ -15,11 +15,11 @@ base_url	= target_url + "#{gumroad_access_token}&before=#{Date.today}&after=#{Da
 i = 1  
 
 json = JSON.parse(open(base_url){ |uri| data = uri.read })
-
-if json['next_page_url'].nil? == false
+binding pry
+if json['next_page_url'] == true
 	
   @each_json = JSON.parse(open(base_url + "&page=#{i}"){ |uri| data = uri.read})
-    while  @each_json['next_page_url'].nil? == false 
+    while  @each_json['next_page_url'] == true 
       @each_json = JSON.parse(open(base_url + "&page=#{i}"){ |uri| data = uri.read})	
 	  i += 1
     end
@@ -29,7 +29,7 @@ if json['next_page_url'].nil? == false
 
   Idobata::Message.create(source:"設定された日付からの集計は #{total}")
 
-else if json['next_page_url'].nil? == true  &&  json['sales'].size  > 0
+else if json['next_page_url'] == false  &&  json['sales'].size  > 0
   emoji_readable = []
   @body = uriage(json['sales'].size)
   emoji_readable  << @body
