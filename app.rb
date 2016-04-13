@@ -5,26 +5,27 @@ require 'idobata'
 #require 'pry'
 require './art.rb'
 
-Idobata.hook_url 	  = ENV['IDOBATA_END']
+Idobata.hook_url      = ENV['IDOBATA_END']
 gumroad_access_token  = ENV['GUMROAD_ACCESS_TOKEN']
 
 
-target_url  = "https://api.gumroad.com/v2/sales/?access_token="
-base_url	= target_url + "#{gumroad_access_token}&before=#{Date.today}&after=#{Date.today - 1}"
-#base_url	= target_url + "#{gumroad_access_token}&before=2016-4-10&after=2016-3-1"
+base_url    = "https://api.gumroad.com/v2/sales/?access_token="
+target_url  = base_url + "#{gumroad_access_token}&before=#{Date.today}&after=#{Date.today - 1}"
+#target_url  = base_url + "#{gumroad_access_token}&before=2016-4-13&after=2016-1-1"
 i = 1  
 
-json = JSON.parse(open(base_url){ |uri| data = uri.read })
+json = JSON.parse(open(target_url) {|uri| uri.read})
+
 if json['next_page_url']
 	
-  @each_json = JSON.parse(open(base_url + "&page=#{i}"){ |uri| data = uri.read})
+  @each_json = JSON.parse(open(target_url + "&page=#{i}"){ |uri| data = uri.read})
     while  @each_json['next_page_url'] 
-      @each_json = JSON.parse(open(base_url + "&page=#{i}"){ |uri| data = uri.read})	
+      @each_json = JSON.parse(open(target_url + "&page=#{i}"){ |uri| data = uri.read})	
 	  i += 1
     end
 
-  last_json	= JSON.parse(open(base_url+ "&page=#{i - 1}"){ |uri| data = uri.read })
-  rest_json = last_json['sales'].size + ((i-2)*10)
+  last_json  = JSON.parse(open(target_url+ "&page=#{i - 1}"){ |uri| data = uri.read })
+  total  = last_json['sales'].size + ((i-2)*10)
 
   Idobata::Message.create(source:"設定された日付からの集計は #{total}")
 
