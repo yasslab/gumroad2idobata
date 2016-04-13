@@ -15,11 +15,10 @@ base_url	= target_url + "#{gumroad_access_token}&before=#{Date.today}&after=#{Da
 i = 1  
 
 json = JSON.parse(open(base_url){ |uri| data = uri.read })
-binding pry
-if json['next_page_url'] == true
+if json['next_page_url']
 	
   @each_json = JSON.parse(open(base_url + "&page=#{i}"){ |uri| data = uri.read})
-    while  @each_json['next_page_url'] == true 
+    while  @each_json['next_page_url'] 
       @each_json = JSON.parse(open(base_url + "&page=#{i}"){ |uri| data = uri.read})	
 	  i += 1
     end
