@@ -108,27 +108,27 @@ BODY
 BODY
 def uriage(uriage) 
   case uriage
-  when "10"
+  when 10
     @ten
-  when "9"
+  when 9
   	@nine
-  when "8"
+  when 8
   	@eight
-  when "7"
+  when 7
   	@seven
-  when "6"
+  when 6
   	@six
-  when "5"
+  when 5
   	@five
-  when "4"
+  when 4
   	@four
-  when "3"
+  when 3
   	@three
-  when "2"
+  when 2
   	@two
-  when "1"
+  when 1
   	@one
-  when "0"
+  when 0
 	@zero
   else
     ':moneybag:' * uriage.to_i

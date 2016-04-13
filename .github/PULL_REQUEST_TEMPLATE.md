@@ -7,13 +7,11 @@ Gumroadでの売上の差分を一日置きに取得してみんなが見るチ�
 - [x] GumroadのAPIを実行して売上を取得できる
 - [x] Gumroadの売上を集計できる
 - [x] Idobataに売上を投稿できる
-- [x] heroku Sceduler から定期的に実行する (現在停止中)
+- [x] heroku Sceduler から定期的に実行する 
+- [x] 差分をJsonで表示
 
 ## やらなかったこと
-- Heroku scd. から過去の変数を取得する
-- 差分を表示
-
+- Readableなコードの変数を書くこと
+- Spacingに気をつけること
 
 ## 困ってること
-
-データベースを利用して集計をしたほうがいいのか
