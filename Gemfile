@@ -3,6 +3,6 @@ source 'https://rubygems.org'
 
 gem 'idobata'
 
-#group :development do
+group :development do
   gem 'pry'
-#end
+end
