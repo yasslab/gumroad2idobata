@@ -20,6 +20,7 @@ class Gumroad
 end
 
 gumroad = Gumroad.new(ENV['GUMROAD_ACCESS_TOKEN'])
+Idobata.hook_url = ENV['IDOBATA_END']
 
 
 binding
