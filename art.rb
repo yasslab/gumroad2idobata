@@ -106,6 +106,7 @@ BODY
 :cloud::money::cloud::money::cloud::cloud:
 :cloud::cloud::money::cloud::cloud::cloud:
 BODY
+
 def uriage(uriage) 
   case uriage
   when 10
