@@ -9,9 +9,9 @@ Gumroadでの売上の差分を一日置きに取得してみんなが見るチ�
 - [x] Idobataに売上を投稿できる
 - [x] heroku Sceduler から定期的に実行する 
 - [x] 差分をJsonで表示
+- [ ] Readable Codeの適応
 
 ## やらなかったこと
-- Readableなコードの変数を書くこと
-- Spacingに気をつけること
+- Readme を書くこと
 
 ## 困ってること
