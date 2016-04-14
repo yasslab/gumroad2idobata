@@ -5,7 +5,6 @@ require 'idobata'
 require 'pry'
 require './art.rb'
 
-
 class Gumroad
   def initialize(token)
     @base_url  = "https://api.gumroad.com"
@@ -13,10 +12,15 @@ class Gumroad
     @start_page_url = "/v2/sales/?before=#{Date.today}&after=#{Date.today - 1}"
   end
 
-
-def sold_item_getter(i)
-  @item_list = JSON.parse(open(@target_url + "&page=#{i}").read)
+  def sales_data_getter(pager_url)
+    pager_url.replace(@start_page_url)
+    target_url = @base_url  + page_url + @token_url
+    JSON.parse(open(target_url).read)
+  end
 end
+
+
+
 binding
 if sold_item_getter(1)
 	    while  @item_list['next_page_url'] 
