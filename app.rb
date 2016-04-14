@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 require 'open-uri'
 require 'date'
 require 'json'
@@ -13,7 +14,7 @@ class Gumroad
   end
 
   def sales_data_getter(pager_url)
-    pager_url.replace(@start_page_url)
+    page_url ||= @first_page_url  #same as .replace? ask @yasulab
     target_url = @base_url  + page_url + @token_url
     JSON.parse(open(target_url).read)
   end
@@ -21,6 +22,7 @@ end
 
 gumroad = Gumroad.new(ENV['GUMROAD_ACCESS_TOKEN'])
 Idobata.hook_url = ENV['IDOBATA_END']
+
 
 
 binding
