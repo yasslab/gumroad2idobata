@@ -8,7 +8,6 @@ require './art.rb'
 Idobata.hook_url      = ENV['IDOBATA_END']
 gumroad_access_token  = ENV['GUMROAD_ACCESS_TOKEN']
 
-
 base_url    = "https://api.gumroad.com/v2/sales/?access_token="
 target_url  = base_url + "#{gumroad_access_token}&before=#{Date.today}&after=#{Date.today - 1}"
 # target_url  = base_url + "#{gumroad_access_token}&before=2016-4-13&after=2016-1-1"
