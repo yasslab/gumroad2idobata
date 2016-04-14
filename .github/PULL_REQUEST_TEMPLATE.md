@@ -13,3 +13,9 @@ Gumroad2idobataのコード綺麗に読みやすく書きたい
 ## やらなかったこと
 
 ## 困ってること
+
+## わからなかったこと
+''''lang ruby
+    page_url ||= @start_page_url  	#same as .replace? ask @yasulab
+    sales_item_data = {} 			#{} => hash [] => array
+''''
