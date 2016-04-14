@@ -23,8 +23,14 @@ end
 gumroad = Gumroad.new(ENV['GUMROAD_ACCESS_TOKEN'])
 Idobata.hook_url = ENV['IDOBATA_END']
 
+sales_item_data = {} #{} => hash [] => array
+sale_item_count = 0
 
-
+loop do
+  sales_item_data = gumroad.sales_data_getter(sales_item_data['next_page_url'])
+  sale_item_count += sales_item_data['next_page_url'].size
+  break if sales['next_page_url'].nil?
+end
 binding
 if sold_item_getter(1)
 	    while  @item_list['next_page_url'] 
