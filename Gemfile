@@ -3,3 +3,7 @@ source 'https://rubygems.org'
 
 gem 'idobata'
 gem 'test-unit'
+
+group :development do
+  gem 'pry'
+end
