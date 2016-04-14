@@ -19,6 +19,7 @@ class Gumroad
   end
 end
 
+gumroad = Gumroad.new(ENV['GUMROAD_ACCESS_TOKEN'])
 
 
 binding
