@@ -14,7 +14,7 @@ class Gumroad
   end
 
   def sales_page_get(page_url)
-    page_url ||= @start_page_url  #replacing recived url from the previous url
+    page_url ||= @start_page_url 
     target_url = @base_url  + page_url + @token_url
     JSON.parse(open(target_url).read)
   end
