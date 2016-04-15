@@ -10,4 +10,8 @@ Gumroad2idobataのコード綺麗に読みやすく書きたい
 - Todo
   - todo_temp 
 
+
+## やらなかったこと
+
+
 ## 困ってること
