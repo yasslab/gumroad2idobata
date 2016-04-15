@@ -11,8 +11,10 @@ class TestSample < Test::Unit::TestCase
   end
 
   def test_gumroad_api
-    sales = JSON.parse(open(@target_url) {|uri| uri.read})
+    sales = JSON.parse(open(@target_url).read)
     p sales
     assert_false sales['next_page_url'].nil?
   end
+
+
 end
