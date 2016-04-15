@@ -3,8 +3,13 @@
 Gumroad2idobataのコード綺麗に読みやすく書きたい
 
 ## やったこと
+- [ ] Done
+- [ ] Done_temp
 
-- [ ] Readable Codeの適応
+## やらなかったこと
+- Todo
+  - todo_temp 
+
 
 ## やらなかったこと
 
