@@ -21,7 +21,7 @@ class Gumroad
 end
 
 gumroad = Gumroad.new(ENV['GUMROAD_ACCESS_TOKEN'])
-Idobata.hook_url = ENV['IDOBATA_END']
+Idobata.hook_url = ENV['IDOBATA_LOCAL_END']
 
 sales_data = {}  #example: {"success":true,"sales":[....],"next_page_url":[]}
 sales_count = 0
