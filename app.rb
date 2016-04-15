@@ -3,7 +3,7 @@ require 'open-uri'
 require 'date'
 require 'json'
 require 'idobata'
-require 'pry'
+#require 'pry'
 require './art.rb'
 
 class Gumroad
