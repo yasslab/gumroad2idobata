@@ -15,6 +15,11 @@ class TestSample < Test::Unit::TestCase
     p sales
     assert_false sales['next_page_url'].nil?
   end
-
+  
+  def test_creating_hash
+    numerical_emoji_strings = Hash.new
+    numerical_emoji_strings[1] = ":cloud::moneybag::moneybag::moneybag::cloud::cloud:"
+    assert_true numerical_emoji_strings.class == Hash
+  end
 
 end
