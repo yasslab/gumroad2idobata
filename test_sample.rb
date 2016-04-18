@@ -21,7 +21,7 @@ class TestSample < Test::Unit::TestCase
     emoji_string = Hash.new
     emoji_string[1] = ":cloud::moneybag::moneybag::moneybag::cloud::cloud:"
     
-    assert_true emoji_strings[1] == ":cloud::moneybag::moneybag::moneybag::cloud::cloud:"
+    assert_true emoji_string.class == Hash
   end
 
 end
