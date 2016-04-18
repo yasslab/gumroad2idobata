@@ -13,13 +13,15 @@ class TestSample < Test::Unit::TestCase
   def test_gumroad_api
     sales = JSON.parse(open(@target_url).read)
     p sales
+    
     assert_false sales['next_page_url'].nil?
   end
   
   def test_creating_hash
-    numerical_emoji_strings = Hash.new
-    numerical_emoji_strings[1] = ":cloud::moneybag::moneybag::moneybag::cloud::cloud:"
-    assert_true numerical_emoji_strings.class == Hash
+    emoji_string = Hash.new
+    emoji_string[1] = ":cloud::moneybag::moneybag::moneybag::cloud::cloud:"
+    
+    assert_true emoji_strings[1] == ":cloud::moneybag::moneybag::moneybag::cloud::cloud:"
   end
 
 end
