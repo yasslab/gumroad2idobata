@@ -1,10 +1,9 @@
-def uriage(sales_number)
-  @emojis[sales_number]
-end
+# -*- coding: utf-8 -*-
+#Scroll Down for uriage method
 
-@emojis = Hash.new
+emojis = Hash.new
 
-@emojis[9] = "
+emojis[9] = "
   :cloud::moneybag::moneybag::moneybag::cloud::cloud:
   :moneybag::cloud::cloud::cloud::moneybag::cloud:
   :moneybag::cloud::cloud::cloud::moneybag::cloud:
@@ -14,8 +13,7 @@ end
   :cloud::moneybag::moneybag::moneybag::cloud::cloud:
   "
 
-
-@emojis[8] = "
+emojis[8] = "
   :cloud::moneybag::moneybag::moneybag::cloud::cloud:
   :moneybag::cloud::cloud::cloud::moneybag::cloud:
   :moneybag::cloud::cloud::cloud::moneybag::cloud:
@@ -25,7 +23,7 @@ end
   :cloud::moneybag::moneybag::moneybag::cloud::cloud:
   "
 
-@emojis[7] = "
+emojis[7] = "
   :moneybag::moneybag::moneybag::moneybag::moneybag::cloud:
   :moneybag::cloud::cloud::moneybag::cloud::cloud:
   :cloud::cloud::moneybag::cloud::cloud::cloud:
@@ -35,8 +33,7 @@ end
   :cloud::cloud::cloud::cloud::cloud::cloud:
   "
 
-
-@emojis[6] = "
+emojis[6] = "
   :cloud::moneybag::moneybag::moneybag::cloud::cloud:
   :moneybag::cloud::cloud::cloud::moneybag::cloud:
   :moneybag::cloud::cloud::cloud::cloud::cloud:
@@ -46,7 +43,7 @@ end
   :cloud::moneybag::moneybag::moneybag::cloud::cloud:
   "
 
-@emojis[5] = "
+emojis[5] = "
   :moneybag::moneybag:::moneybag::moneybag::cloud::cloud:
   :moneybag::cloud::cloud::cloud::cloud::cloud: 
   :moneybag::cloud::cloud::cloud::cloud::cloud:
@@ -56,7 +53,7 @@ end
   :cloud::moneybag::moneybag::moneybag::cloud::cloud:
   "
 
-@emojis[4] = "
+emojis[4] = "
   :moneybag::cloud::cloud::cloud::cloud::cloud:
   :moneybag::cloud::cloud::moneybag::cloud::cloud:
   :moneybag::cloud::cloud::moneybag::cloud::cloud:
@@ -66,7 +63,7 @@ end
   :cloud::cloud::cloud::moneybag::cloud::cloud:
   "
 
-@emojis[3] = "
+emojis[3] = "
  :cloud::moneybag::moneybag::moneybag::cloud::cloud:
   :moneybag::cloud::cloud::cloud::moneybag::cloud:
   :cloud::cloud::cloud::cloud::moneybag::cloud:
@@ -86,7 +83,7 @@ end
   :moneybag::moneybag::moneybag::moneybag::moneybag::cloud:
   "
 
-@emojis[1] = "
+emojis[1] = "
   :cloud::cloud::moneybag::cloud::cloud::cloud:
   :cloud::moneybag::moneybag::cloud::cloud::cloud:
   :moneybag::cloud::moneybag::cloud::cloud::cloud:
@@ -96,7 +93,7 @@ end
   :moneybag::moneybag::moneybag::moneybag::moneybag::cloud:
   "
 
-@emojis[0] = "
+emojis[0] = "
   :cloud::cloud::moneybag::cloud::cloud::cloud:
   :cloud::moneybag::cloud::moneybag::cloud::cloud:
   :moneybag::cloud::cloud::cloud::moneybag::cloud:
@@ -105,3 +102,6 @@ end
   :cloud::moneybag::cloud::moneybag::cloud::cloud:
   :cloud::cloud::moneybag::cloud::cloud::cloud:
   "
+  define_method :uriage do |sales|
+    puts emojis[sales]
+  end
