@@ -103,5 +103,5 @@ emojis[0] = "
   :cloud::cloud::moneybag::cloud::cloud::cloud:
   "
   define_method :uriage do |sales|
-    puts emojis[sales]
+    emojis[sales]
   end
