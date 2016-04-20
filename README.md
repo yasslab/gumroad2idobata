@@ -1,8 +1,9 @@
 #Gumroad to Idobata 
-===============
 
 ## Description
-gumroad2idobata is an automatic sales messenger for [Gumroad](https://gumroad.com). It is designed to be easily used with [idobata](http://idobata.io) messaging app or with a simple fork you can mingle with your  messaging app. Not only it brings the hassle down to retrive data every morning by loging into Gumroad, but with a lovely :moneybag: emoji it will also bring motivation to your team. 
+Gumroad2Idobata is an automatic sales messenger for [Gumroad](https://gumroad.com). 
+
+It is designed to be easily used with [idobata](http://idobata.io) messaging app or with a simple fork you can mingle with your messaging app. This not only it brings the hassle down to retrive data every morning by loging into Gumroad, but with a lovely :moneybag: emoji it will also bring motivation to your team. 
 
 ## Example
 ![gumroad2idobata demo](https://github.com/yasslab/gumroad2idobata/blob/readable-art-file/.github/demo.jpg)
