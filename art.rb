@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-#Scroll Down for uriage method
+# Scroll Down for uriage method
 
 emojis = Hash.new
 C = ":cloud:"
@@ -12,7 +12,7 @@ def str2art(str)
      .gsub!(" ", "")
 end
 
-emojis[9] = str2art("
+emojis["9"] = str2art("
   C_M_M_M_C_C
   M_C_C_C_M_C
   M_C_C_C_M_C
@@ -22,7 +22,7 @@ emojis[9] = str2art("
   C_M_M_M_C_C
   ")
 
-emojis[8] = str2art("
+emojis["8"] = str2art("
   C_M_M_M_C_C
   M_C_C_C_M_C
   M_C_C_C_M_C
@@ -32,7 +32,7 @@ emojis[8] = str2art("
   C_M_M_M_C_C
   ")
 
-emojis[7] = str2art("
+emojis["7"] = str2art("
   M_M_M_M_M_C
   M_C_C_M_C_C
   C_C_M_C_C_C
@@ -42,7 +42,7 @@ emojis[7] = str2art("
   C_C_C_C_C_C
   ")
 
-emojis[6] = str2art("
+emojis["6"] = str2art("
   C_M_M_M_C_C
   M_C_C_C_M_C
   M_C_C_C_C_C
@@ -52,7 +52,7 @@ emojis[6] = str2art("
   C_M_M_M_C_C
   ")
 
-emojis[5] = str2art("
+emojis["5"] = str2art("
   M_M_M_M_M_C
   M_C_C_C_C_C
   M_C_C_C_C_C
@@ -62,7 +62,7 @@ emojis[5] = str2art("
   C_M_M_M_C_C
   ")
 
-emojis[4] = str2art("
+emojis["4"] = str2art("
   M_C_C_C_C_C
   M_C_C_M_C_C
   M_C_C_M_C_C
@@ -72,7 +72,7 @@ emojis[4] = str2art("
   C_C_C_M_C_C
   ")
 
-emojis[3] = str2art("
+emojis["3"] = str2art("
   C_M_M_M_C_C
   M_C_C_C_M_C
   C_C_C_C_M_C
@@ -82,7 +82,7 @@ emojis[3] = str2art("
   C_M_M_M_C_C
   ")
 
-emojis[2] = str2art("
+emojis["2"] = str2art("
   C_M_M_M_C_C
   M_C_C_C_M_C
   C_C_C_C_M_C
@@ -92,7 +92,7 @@ emojis[2] = str2art("
   M_M_M_M_M_C
   ")
 
-emojis[1] = str2art("
+emojis["1"] = str2art("
   C_C_M_C_C_C
   C_M_M_C_C_C
   M_C_M_C_C_C
@@ -102,7 +102,7 @@ emojis[1] = str2art("
   M_M_M_M_M_C
   ")
 
-emojis[0] = str2art("
+emojis["0"] = str2art("
   C_M_M_M_C_C
   M_C_C_C_M_C
   M_C_C_C_M_C
@@ -113,5 +113,5 @@ emojis[0] = str2art("
   ")
 
 define_method :uriage do |sales|
-  emojis[sales]
+  emojis[sales.to_s]
 end
