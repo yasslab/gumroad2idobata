@@ -98,16 +98,16 @@ BODY
 BODY
 
 @zero = <<BODY
-:cloud::cloud::money::cloud::cloud::cloud:
-:cloud::monry::cloud::money::cloud::cloud:
-:money::cloud::cloud::cloud::money::cloud:
-:money::cloud::cloud::cloud::money::cloud:
-:money::cloud::cloud::cloud::money::cloud:
-:cloud::money::cloud::money::cloud::cloud:
-:cloud::cloud::money::cloud::cloud::cloud:
+:cloud::cloud::moneybag::cloud::cloud::cloud:
+:cloud::moneybag::cloud::moneybag::cloud::cloud:
+:moneybag::cloud::cloud::cloud::moneybag::cloud:
+:moneybag::cloud::cloud::cloud::moneybag::cloud:
+:moneybag::cloud::cloud::cloud::moneybag::cloud:
+:cloud::moneybag::cloud::moneybag::cloud::cloud:
+:cloud::cloud::moneybag::cloud::cloud::cloud:
 BODY
 
-def uriage(uriage) 
+def uriage(uriage)
   case uriage
   when 10
     @ten
