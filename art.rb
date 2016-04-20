@@ -1,137 +1,117 @@
-@ten = <<BODY
-:cloud::cloud::moneybag::cloud::cloud:
-:cloud::cloud::moneybag::cloud::cloud:
-:moneybag::moneybag::moneybag::moneybag::moneybag:
-:cloud::cloud::moneybag::cloud::cloud:
-:cloud::cloud::moneybag::cloud::cloud:
-:cloud::cloud::moneybag::cloud::cloud:
-BODY
+# -*- coding: utf-8 -*-
+# Scroll Down for uriage method
 
-@nine = <<BODY
-:cloud::moneybag::moneybag::moneybag::cloud::cloud:
-:moneybag::cloud::cloud::cloud::moneybag::cloud:
-:moneybag::cloud::cloud::cloud::moneybag::cloud:
-:cloud::moneybag::moneybag::moneybag::moneybag::cloud:
-:cloud::cloud::cloud::cloud::moneybag::cloud:
-:moneybag::cloud::cloud::cloud::moneybag::cloud:
-:cloud::moneybag::moneybag::moneybag::cloud::cloud:
-BODY
+emojis = Hash.new
+C = ":cloud:"
+M = ":moneybag:"
 
-@eight = <<BODY
-:cloud::moneybag::moneybag::moneybag::cloud::cloud:
-:moneybag::cloud::cloud::cloud::moneybag::cloud:
-:moneybag::cloud::cloud::cloud::moneybag::cloud:
-:cloud::moneybag::moneybag::moneybag::cloud::cloud:
-:moneybag::cloud::cloud::cloud::moneybag::cloud:
-:moneybag::cloud::cloud::cloud::moneybag::cloud:
-:cloud::moneybag::moneybag::moneybag::cloud::cloud:
-BODY
+def str2art(str)
+  str.gsub!("C", ":cloud:")
+     .gsub!("M", ":moneybag:")
+     .gsub!("_", "")
+     .gsub!(" ", "")
+end
 
-@seven = <<BODY
-:moneybag::moneybag::moneybag::moneybag::moneybag::cloud:
-:moneybag::cloud::cloud::moneybag::cloud::cloud:
-:cloud::cloud::moneybag::cloud::cloud::cloud:
-:cloud::moneybag::cloud::cloud::cloud::cloud:
-:cloud::moneybag::cloud::cloud::cloud::cloud:
-:cloud::moneybag::cloud::cloud::cloud::cloud:
-:cloud::cloud::cloud::cloud::cloud::cloud:
-BODY
+emojis["9"] = str2art("
+  C_M_M_M_C_C
+  M_C_C_C_M_C
+  M_C_C_C_M_C
+  C_M_M_M_M_C
+  C_C_C_C_M_C
+  M_C_C_C_M_C
+  C_M_M_M_C_C
+  ")
 
-@six = <<BODY
-:cloud::moneybag::moneybag::moneybag::cloud::cloud:
-:moneybag::cloud::cloud::cloud::moneybag::cloud:
-:moneybag::cloud::cloud::cloud::cloud::cloud:
-:moneybag::moneybag::moneybag::moneybag::cloud::cloud:
-:moneybag::cloud::cloud::cloud::moneybag::cloud:
-:moneybag::cloud::cloud::cloud::moneybag::cloud:
-:cloud::moneybag::moneybag::moneybag::cloud::cloud:
-BODY
+emojis["8"] = str2art("
+  C_M_M_M_C_C
+  M_C_C_C_M_C
+  M_C_C_C_M_C
+  C_M_M_M_C_C
+  M_C_C_C_M_C
+  M_C_C_C_M_C
+  C_M_M_M_C_C
+  ")
 
-@five = <<BODY
-:moneybag::moneybag:::moneybag::moneybag::cloud::cloud:
-:moneybag::cloud::cloud::cloud::cloud::cloud:
-:moneybag::cloud::cloud::cloud::cloud::cloud:
-:moneybag::moneybag::moneybag::moneybag::cloud::cloud:
-:cloud::cloud::cloud::cloud::moneybag::cloud:
-:moneybag::cloud::cloud::cloud::moneybag::cloud:
-:cloud::moneybag::moneybag::moneybag::cloud::cloud:
-BODY
+emojis["7"] = str2art("
+  M_M_M_M_M_C
+  M_C_C_M_C_C
+  C_C_M_C_C_C
+  C_M_C_C_C_C
+  C_M_C_C_C_C
+  C_M_C_C_C_C
+  C_C_C_C_C_C
+  ")
 
-@four = <<BODY
-:moneybag::cloud::cloud::cloud::cloud::cloud:
-:moneybag::cloud::cloud::moneybag::cloud::cloud:
-:moneybag::cloud::cloud::moneybag::cloud::cloud:
-:moneybag::cloud::cloud::moneybag::cloud::cloud:
-:moneybag::moneybag::moneybag::moneybag::moneybag::cloud:
-:cloud::cloud::cloud::moneybag::cloud::cloud:
-:cloud::cloud::cloud::moneybag::cloud::cloud:
-BODY
+emojis["6"] = str2art("
+  C_M_M_M_C_C
+  M_C_C_C_M_C
+  M_C_C_C_C_C
+  M_M_M_M_C_C
+  M_C_C_C_M_C
+  M_C_C_C_M_C
+  C_M_M_M_C_C
+  ")
 
-@three = <<BODY
-:cloud::moneybag::moneybag::moneybag::cloud::cloud:
-:moneybag::cloud::cloud::cloud::moneybag::cloud:
-:cloud::cloud::cloud::cloud::moneybag::cloud:
-:cloud::moneybag::moneybag::moneybag::cloud::cloud:
-:cloud::cloud::cloud::cloud::moneybag::cloud:
-:moneybag::cloud::cloud::cloud::moneybag::cloud:
-:cloud::moneybag::moneybag::moneybag::cloud::cloud:
-BODY
+emojis["5"] = str2art("
+  M_M_M_M_M_C
+  M_C_C_C_C_C
+  M_C_C_C_C_C
+  M_M_M_M_C_C
+  C_C_C_C_M_C
+  M_C_C_C_M_C
+  C_M_M_M_C_C
+  ")
 
-@two = <<BODY
-:cloud::moneybag::moneybag::moneybag::cloud::cloud:
-:moneybag::cloud::cloud::cloud::moneybag::cloud:
-:cloud::cloud::cloud::cloud::moneybag::cloud:
-:cloud::moneybag::moneybag::moneybag::cloud::cloud:
-:moneybag::cloud::cloud::cloud::cloud::cloud:
-:moneybag::cloud::cloud::cloud::cloud::cloud:
-:moneybag::moneybag::moneybag::moneybag::moneybag::cloud:
-BODY
+emojis["4"] = str2art("
+  M_C_C_C_C_C
+  M_C_C_M_C_C
+  M_C_C_M_C_C
+  M_C_C_M_C_C
+  M_M_M_M_M_C
+  C_C_C_M_C_C
+  C_C_C_M_C_C
+  ")
 
-@one = <<BODY
-:cloud::cloud::moneybag::cloud::cloud::cloud:
-:cloud::moneybag::moneybag::cloud::cloud::cloud:
-:moneybag::cloud::moneybag::cloud::cloud::cloud:
-:cloud::cloud::moneybag::cloud::cloud::cloud:
-:cloud::cloud::moneybag::cloud::cloud::cloud:
-:cloud::cloud::moneybag::cloud::cloud::cloud:
-:moneybag::moneybag::moneybag::moneybag::moneybag::cloud:
-BODY
+emojis["3"] = str2art("
+  C_M_M_M_C_C
+  M_C_C_C_M_C
+  C_C_C_C_M_C
+  C_M_M_M_C_C
+  C_C_C_C_M_C
+  M_C_C_C_M_C
+  C_M_M_M_C_C
+  ")
 
-@zero = <<BODY
-:cloud::cloud::moneybag::cloud::cloud::cloud:
-:cloud::moneybag::cloud::moneybag::cloud::cloud:
-:moneybag::cloud::cloud::cloud::moneybag::cloud:
-:moneybag::cloud::cloud::cloud::moneybag::cloud:
-:moneybag::cloud::cloud::cloud::moneybag::cloud:
-:cloud::moneybag::cloud::moneybag::cloud::cloud:
-:cloud::cloud::moneybag::cloud::cloud::cloud:
-BODY
+emojis["2"] = str2art("
+  C_M_M_M_C_C
+  M_C_C_C_M_C
+  C_C_C_C_M_C
+  C_M_M_M_C_C
+  M_C_C_C_C_C
+  M_C_C_C_C_C
+  M_M_M_M_M_C
+  ")
 
-def uriage(uriage)
-  case uriage
-  when 10
-    @ten
-  when 9
-  	@nine
-  when 8
-  	@eight
-  when 7
-  	@seven
-  when 6
-  	@six
-  when 5
-  	@five
-  when 4
-  	@four
-  when 3
-  	@three
-  when 2
-  	@two
-  when 1
-  	@one
-  when 0
-	@zero
-  else
-    ':moneybag:' * uriage.to_i
-  end
+emojis["1"] = str2art("
+  C_C_M_C_C_C
+  C_M_M_C_C_C
+  M_C_M_C_C_C
+  C_C_M_C_C_C
+  C_C_M_C_C_C
+  C_C_M_C_C_C
+  M_M_M_M_M_C
+  ")
+
+emojis["0"] = str2art("
+  C_M_M_M_C_C
+  M_C_C_C_M_C
+  M_C_C_C_M_C
+  M_C_C_C_M_C
+  M_C_C_C_M_C
+  M_C_C_C_M_C
+  C_M_M_M_C_C
+  ")
+
+define_method :uriage do |sales|
+  emojis[sales.to_s]
 end
