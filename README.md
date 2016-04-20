@@ -22,6 +22,16 @@ You can use this program by going to the repository then typing these on the com
 $ bundle install
 $ ruby app.rb
 ```
+
+## Overview
+1. The program creates an url that enables access to your sales on gumroad dependent on time
+2. Website will only return 10 individual sales data per time
+3. The program will iliteraltes as the 'next_page_url' exist on the returned pages
+4. As it loops through the all the pages returned data are added
+5. When all the data are returned the program will count the sales
+6. Then the program access art.rb with the total number of sales in the parameter to return lovely emoji's
+7. Finally the lovely emoji are sent to the messaging app 
+
 -
 [![YassLab Logo](https://dl.dropboxusercontent.com/u/2819285/yasslab_logo_copy.png)](http://yasslab.jp/)
 
