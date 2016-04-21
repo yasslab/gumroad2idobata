@@ -7,7 +7,7 @@ It is designed to be easily used with [idobata](http://idobata.io) messaging app
 This will not only bring the hassle down to retrieve your data every morning by logging into Gumroad but with a lovely :moneybag: emoji it will also bring motivation to your team. 
 
 ## Example
-![gumroad2idobata demo](https://github.com/yasslab/gumroad2idobata/blob/readable-art-file/.github/demo.jpg)
+![gumroad2idobata demo](https://github.com/yasslab/gumroad2idobata/blob/master/.github/demo.jpg)
 
 ## Prerequisite
 - Currently running on Heroku scheduler 
