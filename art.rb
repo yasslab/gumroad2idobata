@@ -113,5 +113,6 @@ emojis["0"] = str2art("
   ")
 
 define_method :uriage do |sales|
+  break if sales == 0
   emojis[sales.to_s]
 end

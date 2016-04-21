@@ -21,7 +21,7 @@ class Gumroad
 end
 
 gumroad = Gumroad.new(ENV['GUMROAD_ACCESS_TOKEN'])
-Idobata.hook_url = ENV['IDOBATA_END']
+Idobata.hook_url = ENV['IDOBATA_LOCAL_END']
 
 sales_data = {}  #example: {"success":true,"sales":[....],"next_page_url":[]}
 sales_count = 0
@@ -29,7 +29,7 @@ sales_count = 0
 loop do
   sales_data = gumroad.sales_page_get(sales_data['next_page_url'])
   sales_count += sales_data['sales'].size
-  break if sales_data['next_page_url'].nil?
+  break if sales_data['next_page_url'].nil? 
 end
 
 Idobata::Message.create(source:"#{uriage(sales_count)}")
