@@ -3,7 +3,5 @@ ruby '2.3.1'
 
 gem 'idobata'
 gem 'test-unit'
+gem 'pry'
 
-group :development do
-  gem 'pry'
-end
