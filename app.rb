@@ -45,6 +45,7 @@ loop do
 end
 
 if OUTPUT_STYLE == :emojis
+  exit if sales_emojis.empty?
   Idobata::Message.create(source: sales_emojis)
 elsif OUTPUT_STYLE == :art
   Idobata::Message.create(source: "#{uriage(sales_count)}")
