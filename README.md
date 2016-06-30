@@ -22,7 +22,7 @@ Useable with slack
 You can use this program by going to the repository then typing these on the command line:
 
 ```
-$ bundle exec ruby app.rb
+$ bundle exec ruby main.rb
 ```
 
 ## How to Use
