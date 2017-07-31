@@ -1,4 +1,4 @@
-#Gumroad to Idobata 
+# Gumroad to Idobata 
 
 Gumroad2Idobata is an automatic sales messenger for [Gumroad](https://gumroad.com). 
 
